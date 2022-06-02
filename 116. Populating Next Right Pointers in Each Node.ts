@@ -1,4 +1,4 @@
-class Node {
+export class Node {
   val: number;
   left: Node | null;
   right: Node | null;
@@ -11,7 +11,7 @@ class Node {
   }
 }
 
-function connect(root: Node | null): Node | null {
+export function connect(root: Node | null): Node | null {
   const q = [root, null];
 
   while (q.length > 0) {
