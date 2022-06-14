@@ -54,8 +54,6 @@ function spiralOrder(matrix: number[][]): number[] {
     left++;
     c++;
   }
-
-  return result;
 }
 
 console.log(
