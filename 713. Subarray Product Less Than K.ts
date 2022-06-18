@@ -15,5 +15,5 @@ function numSubarrayProductLessThanK(nums: number[], k: number): number {
   return ans;
 }
 
-console.log(numSubarrayProductLessThanK([10, 5, 2, 6], 100)); // [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
+console.log(numSubarrayProductLessThanK([10, 5, 2, 6], 100)); // 8
 console.log(numSubarrayProductLessThanK([1, 2, 3], 0)); // 0
