@@ -40,4 +40,4 @@ function minimumLengthEncoding(words: string[]): number {
 }
 
 console.log(minimumLengthEncoding(['time', 'me', 'bell'])); // 10
-console.log(minimumLengthEncoding(['t'])); // 10
+console.log(minimumLengthEncoding(['t'])); // 2
