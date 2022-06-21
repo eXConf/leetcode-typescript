@@ -7,6 +7,39 @@ export class ListNode {
   }
 }
 
+export class MyMaxPriorityQueue {
+  list: number[];
+  constructor() {
+    this.list = [];
+  }
+
+  enqueue(val: number) {
+    if (this.list.length === 0) {
+      this.list.push(val);
+    } else {
+      for (let i = 0; i < this.list.length; i++) {
+        if (val > this.list[i]) {
+          this.list.splice(i, 0, val);
+          break;
+        }
+      }
+      this.list.push(val);
+    }
+  }
+
+  dequeue(): number | undefined {
+    if (!this.isEmpty()) return this.list.shift();
+  }
+
+  isEmpty(): boolean {
+    return this.list.length === 0;
+  }
+
+  front(): number {
+    return this.list[0];
+  }
+}
+
 export function makeListNode(arr: number[]): ListNode | null {
   if (arr.length === 0) return null;
 
