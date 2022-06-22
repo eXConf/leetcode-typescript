@@ -40,6 +40,43 @@ export class MyMaxPriorityQueue {
   }
 }
 
+class MyMinPriorityQueue {
+  list: number[];
+  constructor() {
+    this.list = [];
+  }
+
+  enqueue(val: number) {
+    if (this.isEmpty()) {
+      this.list.push(val);
+    } else {
+      for (let i = 0; i < this.list.length; i++) {
+        if (val > this.list[i]) {
+          this.list.splice(i, 0, val);
+          return;
+        }
+      }
+      this.list.push(val);
+    }
+  }
+
+  dequeue(): number | undefined {
+    if (!this.isEmpty()) return this.list.pop();
+  }
+
+  isEmpty(): boolean {
+    return this.list.length === 0;
+  }
+
+  front(): number {
+    return this.list[this.list.length - 1];
+  }
+
+  size(): number {
+    return this.list.length;
+  }
+}
+
 export function makeListNode(arr: number[]): ListNode | null {
   if (arr.length === 0) return null;
 
